@@ -1,1 +1,1 @@
-/home/anurag/ws/rollup/use-them/dist/image-utils.js
+const t=self;function e(e){const h={width:15,height:15,quality:.5,type:"image/webp",...e};createImageBitmap(h.file).then((t=>{const e=(i=t.width,a=t.height,n=h.max_length,i>n||a>n?i>a?{width:n,height:Math.floor(a*n/i)}:{width:Math.floor(i*n/a),height:n}:{width:i,height:a});var i,a,n;const o=new OffscreenCanvas(e.width,e.height);o.getContext("2d").drawImage(t,0,0,e.width,e.height);return o.convertToBlob({type:h.type,quality:h.quality})})).then((e=>{t.postMessage({id:h.id,file:e})}))}t.onmessage=t=>{e(t.data)};
