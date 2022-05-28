@@ -1,7 +1,7 @@
-import { html } from './js/lit-html/lit-html.js';
-import { RaisedButton, WidgetBuilder, SnackBarBloc, I18NBlocProvider, ThemeProvider, Theme, BogusBloc, NoBlocRaisedButton } from './js/use-them/index.js';
-import { Bloc } from './js/bloc-them/index.js';
-import { repeat } from './js/lit-html/directives/repeat.js';
+import { html } from '../js/lit-html/lit-html.js';
+import { RaisedButton, WidgetBuilder, SnackBarBloc, I18NBlocProvider, ThemeProvider, Theme, BogusBloc, NoBlocRaisedButton } from '../js/use-them/index.js';
+import { Bloc } from '../js/bloc-them/index.js';
+import { repeat } from '../js/lit-html/directives/repeat.js';
 
 class ReadContactsBloc extends Bloc {
     constructor() {
