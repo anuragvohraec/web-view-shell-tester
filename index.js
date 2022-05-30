@@ -245,36 +245,7 @@ class TestWebView1 extends WidgetBuilder {
                     <ut-tabs>
                         <ut-tab index="0" icon="info">
                             <lay-them ma="flex-start" in="column" ca="stretch">
-                                <div><ut-h1>Requirements:</ut-h1></div>
-                                <div style="word-break: break-word;">
-                                    <ol>
-                                        <li>Expose : <pre>native.readPhonebook()</pre> function so that our code can call it and read all contacts on user mobile phone</li>
-                                        <li>Expose : 
-<pre>native.showFilePickerAndCompressThem(
-
-themeHexColor, //will control theme color for file picker so it can suit our website's theme
-maximumNumberOfFilePicked,  //maximum number of file to be allowed to be picked by file picker
-mimeType, //Based on mime type file selector will show only images / videos / audios / files of any type
-bitRateForCompression, //bit rate is used during to decide level of compression, we will want a handle to control this
-reSizeVideoDimension,  //just for video if we wanted to resize it: For example a video is : 1000x500px and we wanted to resit it to 500x250px (Aspect ration will be preserved)
-mediaOutPutType //output file format for video or audio file: its value can be webm or mp4
-
-)</pre> 
-                                            function, which shows native file picker to user, from where in user 
-                                            picks files based on mimetype supplied,
-                                            <ul>
-                                                <li>If its image files (mimeType: image/*),  compress and resize to webp formate</li>
-                                                <li>If its video files (mimeType: video/*), then compress and resize to webm/mp4 format</li>
-                                                <li>If its audio files (mimeType: audio/*), then compress to webm/mp4 format</li>
-                                                <li>if its other files type (mimeType: */*), then simply return as the blobs</li>
-                                            </ul>
-                                            Return us the Blob array for multiple files selected by user after compression/processing. maximum Number of files selected is controlled using <b>maximumNumberOfFilePicked</b> argument.
-                                            File picker should have provision to record audio and video. File picker should have a theme color the one we pass as Hex (for ex: #00f597). <span style="color:red">Do show us the file picker lib you use for this purpose, so we can confirm the look and feel of it</span>
-                                        </li>
-                                        <li>Expose : <pre>native.thermalPrint(textToPrint)</pre> function so that to which we will supply ESC/POS commands to print to a bluetooth connected printer: prefer lib : <a href="https://github.com/DantSu/ESCPOS-ThermalPrinter-Android">DantSuESCPOS-ThermalPrinter-Android from github</a>. As bluetooth will be used so do allow bluetooth access.</li>
-                                        <li>Expose : <pre>native.pushNotifications(title,body,icon)</pre>, so that we can push multiple notification (to be show in android status bar)</li>
-                                    </ol>
-                                </div>
+                                <div><a href="https://github.com/anuragvohraec/web-view-shell-tester"><ut-h1>Click to see requirements</ut-h1></a></div>
                             </lay-them>
                         </ut-tab>
 
