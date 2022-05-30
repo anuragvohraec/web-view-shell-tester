@@ -20,7 +20,7 @@ interface  PhoneBookContact{
 ## native.showFilePickerAndCompressThem
 **Purpose:** This function is called to read files from user system. When this function gets called a Native file picker will be shown to user.
 
-**NOTE**: Please do threads in this so that the UI do not freezes.
+**NOTE**: Please use threads in this so that the UI do not freezes.
 
 ```ts
 

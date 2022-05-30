@@ -68,8 +68,26 @@ class VideoAudioCompressBloc extends Bloc {
     }
     async readAudioOrVideoFileAndCompressThem() {
         try {
-            if (native && native.showFilePickerAndThenCompressVideosAndAudios) {
-                let op = await native.showFilePickerAndThenCompressVideosAndAudios(400);
+            if (native && native.showFilePickerAndCompressThem) {
+                let input = {
+                    id: "lalala",
+                    inputMimeType: "video/*",
+                    maxFileAllowed: 3,
+                    themeHexColor: "#333333",
+                    outputQualities: [
+                        {
+                            bitrate: 1000000,
+                            maxVideoDimension: 200,
+                            mimeType: "video/webm"
+                        },
+                        {
+                            bitrate: 1000000,
+                            maxVideoDimension: 400,
+                            mimeType: "video/webm"
+                        }
+                    ]
+                };
+                let op = await native.showFilePickerAndCompressThem(input);
                 if (op.blobs && op.blobs.length > 0) {
                     this.objectUrlReg.forEach(e => {
                         URL.revokeObjectURL(e);
